@@ -11,14 +11,6 @@
     let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      devShells.default = pkgs.mkShell {
-        buildInputs = with pkgs; [
-          zig
-          zls
-
-          elixir_1_16
-          elixir-ls
-        ];
-      };
+      devShells.default = pkgs.callPackage (import ./shell.nix) {};
     });
 }
