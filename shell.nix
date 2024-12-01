@@ -1,10 +1,7 @@
 {
-  mkShell,
-  zig,
-  zls,
-  elixir_1_16,
-  elixir-ls,
+  pkgs ? import <nixpkgs> {},
 }:
+with pkgs;
 mkShell {
   buildInputs = [
     zig

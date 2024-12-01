@@ -11,6 +11,6 @@
     let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      devShells.default = pkgs.callPackage (import ./shell.nix) {};
+      devShells.default = import ./shell.nix { inherit pkgs; };
     });
 }
