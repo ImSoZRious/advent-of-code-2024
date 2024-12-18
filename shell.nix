@@ -9,5 +9,7 @@ mkShell {
 
     elixir_1_16
     elixir-ls
+
+    lua
   ];
 }
